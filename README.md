@@ -50,16 +50,20 @@ OOP/
 ## 💡 Concepts Covered
 
 ### 🧩 **Encapsulation**
-- File: `Employee.java`  
+- File: `Employee.java`
 - Demonstrates how to protect class data using **private fields**, **getters**, and **setters**.
 
 ### 🧬 **Inheritance**
-- Files: `Animal.java`, `Dog.java`  
+- Files: `Animal.java`, `Dog.java`
 - Shows how a subclass (`Dog`) inherits behavior and properties from a superclass (`Animal`).
 
 ### 🔁 **Polymorphism**
-- Files: `Parent.java`, `Child.java`, `Vehicle.java`, `Car.java`, `Main.java`  
+- Files: `Parent.java`, `Child.java`, `Vehicle.java`, `Car.java`, `Main.java`
 - Demonstrates **method overriding** and **runtime polymorphism**, where a parent reference calls a child’s overridden method.
+
+### 🔒 **Abstraction**
+- Files: `Vehicle.java`, `Car.java`
+- Demonstrates how abstract classes and methods are used to hide implementation details and enforce a contract for subclasses.
 
 ---
 
@@ -73,12 +77,12 @@ OOP/
 
 ## 🧠 Summary of OOP Concepts
 
-| Concept | Description | Example |
-|----------|--------------|----------|
-| **Encapsulation** | Hiding data using private fields and providing controlled access. | `Employee` |
-| **Inheritance** | Reusing and extending behavior from a parent class. | `Dog extends Animal` |
-| **Polymorphism** | One interface, many forms — child methods override parent methods. | `Car extends Vehicle` |
-| **Abstraction** | (Optional to add) Hiding complex logic and exposing simple methods. | Could be added later |
+| Concept         | Description                                                                 | Example                  |
+|------------------|-----------------------------------------------------------------------------|--------------------------|
+| **Encapsulation** | Hiding data using private fields and providing controlled access.          | `Employee`               |
+| **Inheritance**   | Reusing and extending behavior from a parent class.                       | `Dog extends Animal`     |
+| **Polymorphism**  | One interface, many forms — child methods override parent methods.         | `Car extends Vehicle`    |
+| **Abstraction**   | Hiding complex logic and exposing simple methods using abstract classes.   | `Vehicle` and `Car`      |
 
 ---
 
