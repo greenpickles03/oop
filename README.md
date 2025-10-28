@@ -6,6 +6,33 @@ This project demonstrates the core concepts of **Object-Oriented Programming (OO
 
 ## 📁 Project Structure
 
+OOP/
+│
+├── src/
+│ ├── main/
+│ │ └── java/
+│ │ └── org/oop/
+│ │ ├── encapsulation/
+│ │ │ └── Employee.java
+│ │ │
+│ │ ├── inheritance/
+│ │ │ ├── Animal.java
+│ │ │ └── Dog.java
+│ │ │
+│ │ ├── polymorphism/
+│ │ │ ├── Parent.java
+│ │ │ ├── Child.java
+│ │ │ ├── Vehicle.java
+│ │ │ ├── Car.java
+│ │ │ └── Main.java
+│ │ │
+│ │ └── (resources, test)
+│ │
+│ └── test/
+│
+├── pom.xml
+├── .gitignore
+└── note/
 
 ---
 
