@@ -6,3 +6,11 @@ abstract classes and interfaces in Java.
 You have a abstract class and have abstract method to access this abstract method.
 In the child class you have to extend the abstract class using the extends keyword.
 In the main class you have to create the object of the child class to access the abstract method.
+
+* Encapsulation in java is the process of wrapping the variables and methods into a single unit called class.
+Encapsulation protects data from direct access or modification by making it private and exposing it
+only through public methods.
+
+// Example of Encapsulation
+We have a class that have a private variables to access these private variables we have to create a
+public methods called getter and setter methods.
