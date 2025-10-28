@@ -18,7 +18,7 @@ public class Main {
         myCar.startEngine();
         myCar.accelerate();
         myCar.brake();
-
+        // Encapsulation Example
         Employee employee = new Employee();
         employee.setId(1);
         employee.setName("John Doe");
@@ -31,12 +31,13 @@ public class Main {
         System.out.println("Username: " + employee.getUsername());
         // Note: In a real application, avoid printing passwords
 
+        // Inheritance Example
         Dog myDog = new Dog();
-
         myDog.makeSound();
         myDog.sleep();
         myDog.fetch();
 
+        // Polymorphism Example
         Parent parent = new Parent();
         Child child = new Child();
         // Dynamic Polymorphism
