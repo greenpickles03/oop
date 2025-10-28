@@ -14,3 +14,18 @@ only through public methods.
 // Example of Encapsulation
 We have a class that have a private variables to access these private variables we have to create a
 public methods called getter and setter methods.
+
+* Inheritance in java is a mechanism where one class acquires the properties (fields) and behaviors (methods)
+of another class, using the extends keyword. It promotes code usability and establishes a relationship
+
+// Example of Inheritance
+We have a parent class and a child class. The child class extends the parent class using the extends keyword.
+In the main class we create the object of the child class to access the methods of the parent class.
+
+* Polymorphism in java is the ability of a single function or method to operate in different ways based on
+the object that it is acting upon. It can be achieved through method overloading and method overriding.
+
+// Example of Polymorphism
+We have a class that have two methods with same name but different parameters this is called method overloading.
+In method overriding we have a parent class and a child class the child class overrides the method of the parent class
+and it have a @override annotation.

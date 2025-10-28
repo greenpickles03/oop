@@ -2,6 +2,9 @@ package org.oop;
 
 
 import org.oop.encapsulation.Employee;
+import org.oop.inheritance.Dog;
+import org.oop.polymorphism.Child;
+import org.oop.polymorphism.Parent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,5 +30,24 @@ public class Main {
         System.out.println("Name: " + employee.getName());
         System.out.println("Username: " + employee.getUsername());
         // Note: In a real application, avoid printing passwords
+
+        Dog myDog = new Dog();
+
+        myDog.makeSound();
+        myDog.sleep();
+        myDog.fetch();
+
+        Parent parent = new Parent();
+        Child child = new Child();
+        // Dynamic Polymorphism
+        Parent polyChild = new Child(); // Upcasting
+        // Method Overloading (compile-time polymorphism)
+        parent.functionA();
+        parent.functionA(42);
+
+        // Method Overriding (runtime polymorphism)
+        child.functionA(20);
+        // Polymorphism in action
+        polyChild.functionA(30);
     }
 }
