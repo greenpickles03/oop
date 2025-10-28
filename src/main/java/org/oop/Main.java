@@ -6,8 +6,6 @@ import org.oop.inheritance.Dog;
 import org.oop.polymorphism.Child;
 import org.oop.polymorphism.Parent;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
