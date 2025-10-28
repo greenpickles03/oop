@@ -1,0 +1,8 @@
+* Abstraction in java is the process of hiding the complex implementation details and showing only the essential
+features of the object. It helps in reducing programming complexity and effort. Abstraction can be achieved using
+abstract classes and interfaces in Java.
+
+// Example of Abstraction using Abstract Class
+You have a abstract class and have abstract method to access this abstract method.
+In the child class you have to extend the abstract class using the extends keyword.
+In the main class you have to create the object of the child class to access the abstract method.
