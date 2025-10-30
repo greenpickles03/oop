@@ -1,3 +1,8 @@
+//OOP
+Object-Oriented Programming (OOP) is a programming paradigm that uses "objects" to design software. It focuses on
+the concepts of encapsulation, inheritance, polymorphism, and abstraction to create modular and reusable code.
+Here are the four main principles of OOP in Java:
+
 * Abstraction in java is the process of hiding the complex implementation details and showing only the essential
 features of the object. It helps in reducing programming complexity and effort. Abstraction can be achieved using
 abstract classes and interfaces in Java.
@@ -30,3 +35,15 @@ the object that it is acting upon. It can be achieved through method overloading
 We have a class that have two methods with same name but different parameters this is called method overloading.
 In method overriding we have a parent class and a child class the child class overrides the method of the parent class
 and it have a @override annotation.
+
+//Class
+Class is a blueprint or template for creating objects. It defines the properties (attributes) and behaviors (methods)
+of the objects that will be created from it. A class can contain fields, methods, constructors, and nested classes.
+In Java, a class is defined using the "class" keyword followed by the class name and a pair of curly braces {} that
+enclose the class body.
+
+//Object
+An object is an instance of a class. It represents a specific realization of the class and contains its own set of data.
+Objects are created using the "new" keyword followed by the class constructor. Each object has its own state and behavior
+as defined by the class it is instantiated from.
+
