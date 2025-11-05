@@ -40,10 +40,53 @@ and it have a @override annotation.
 Class is a blueprint or template for creating objects. It defines the properties (attributes) and behaviors (methods)
 of the objects that will be created from it. A class can contain fields, methods, constructors, and nested classes.
 In Java, a class is defined using the "class" keyword followed by the class name and a pair of curly braces {} that
-enclose the class body.
+enclose the class body.03
 
 //Object
 An object is an instance of a class. It represents a specific realization of the class and contains its own set of data.
 Objects are created using the "new" keyword followed by the class constructor. Each object has its own state and behavior
 as defined by the class it is instantiated from.
+
+//Singleton Class
+The Singleton Pattern ensures that only one instance of a class exists throughout the application and provides
+a global point of access to that instance.
+
+// Example of Singleton Class
+We have a class with a private static variable to hold the single instance of the class. The constructor is private to prevent
+instantiation from outside the class. A public static method is provided to return the single instance of the class.
+
+//DAO (Data Access Object)
+DAO is a design pattern that provides an abstract interface to the database or other persistence mechanisms.
+It separates the data access logic from the business logic, making it easier to manage and maintain the code.
+A DAO typically contains methods for CRUD (Create, Read, Update, Delete) operations on the data source.
+
+//Example of DAO Pattern
+We have an interface that defines the methods for data access operations. A concrete class implements this interface
+and provides the actual implementation for interacting with the database. The business logic can use the DAO interface
+to perform data operations without worrying about the underlying database details.
+
+//Lambda Expression
+Lambda expressions in Java provide a clear and concise way to represent a single method interface (functional interface)
+using an expression. They enable functional programming features in Java and allow for more readable and maintainable
+code, especially when working with collections and streams.
+
+A Lambda expression is a feature introduced in Java 8 that allows you to write anonymous functions (functions without a name).
+It provides a clear and concise way to represent one method interface (functional interface) using a simple expression.
+
+// Example of Lambda Expression
+We have a functional interface with a single abstract method. A lambda expression is used to provide the implementation of that method.
+The lambda expression can be assigned to a variable of the functional interface type and invoked like a regular method.
+
+we have open and close parenthesis to define the parameters of the lambda expression followed by the arrow operator (->)
+and then the body of the lambda expression.
+
+//Stream API
+Stream API is use to process collections of objects in a functional style. It provides a way to perform operations
+like filtering, mapping, and reducing on data in a declarative manner. Streams can be created from collections, arrays, or I/O channels,
+and they support parallel processing for improved performance.
+
+// Example of Stream API
+We have a list of integers and we want to filter out the even numbers, square them, and collect the results into a new list.
+Using the Stream API, we can achieve this in a concise and readable way by chaining multiple operations together.
+
 
