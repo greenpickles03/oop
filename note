@@ -89,4 +89,232 @@ and they support parallel processing for improved performance.
 We have a list of integers and we want to filter out the even numbers, square them, and collect the results into a new list.
 Using the Stream API, we can achieve this in a concise and readable way by chaining multiple operations together.
 
+//Access Modifiers
+Access modifiers in Java are keywords that determine the visibility and accessibility of classes, methods, and variables
+within different parts of a program. There are four main access modifiers in Java:
+1. Public: The member is accessible from any other class.
+2. Private: The member is accessible only within its own class.
+3. Protected: The member is accessible within its own package and by subclasses.
+4. Default (no modifier): The member is accessible only within its own package.
+//Example of Access Modifiers
+We have a class with members that have different access modifiers. We demonstrate how each member can be
+accessed from within the same class, from a subclass, and from a different package.
+
+//Constructors
+A constructor in Java is a special method that is called when an object of a class is created.
+It is used to initialize the object's properties and allocate memory for the object.
+A constructor has the same name as the class and does not have a return type.
+//Example of Constructor
+We have a class with a constructor that initializes the object's properties. When we create an object of the class,
+the constructor is automatically called to set up the initial state of the object. We can also have parameterized constructors to
+initialize the object with specific values.
+
+//ArrayList
+ArrayList in Java is a resizable array implementation of the List interface. It allows for dynamic
+storage of elements and provides methods to manipulate the list, such as adding, removing, and accessing elements.
+ArrayLists can grow and shrink in size as needed, making them more flexible than traditional arrays.
+//Example of ArrayList
+We have an ArrayList that stores a list of strings. We demonstrate how to add elements to the ArrayList, remove elements,
+and access elements using their index. We also show how to iterate through the ArrayList using a for-each loop.
+
+//LinkedList
+LinkedList in Java is a data structure that implements the List and Deque interfaces. It consists of a sequence of nodes,
+where each node contains data and a reference to the next and previous nodes. LinkedLists allow for efficient insertion and deletion of elements
+at both ends and in the middle of the list.
+//Example of LinkedList
+We have a LinkedList that stores a list of integers. We demonstrate how to add elements to the LinkedList, remove elements,
+and access elements using their index. We also show how to iterate through the LinkedList using an iterator.
+
+//HashMap
+HashMap in Java is a part of the Java Collections Framework and is used to store data in key-value pairs.
+It allows for fast retrieval, insertion, and deletion of elements based on their keys. HashMaps do not maintain any order of the elements.
+//Example of HashMap
+We have a HashMap that stores the names of students as keys and their corresponding grades as values. We demonstrate how to add key-value pairs to the HashMap,
+retrieve values using their keys, and remove key-value pairs. We also show how to iterate through the HashMap using a for-each loop.
+
+//volatile Keyword
+The volatile keyword in Java is used to indicate that a variable's value may be changed by different threads.
+When a variable is declared as volatile, it ensures that any read or write operation on that variable is directly done on the main memory,
+making it visible to all threads. This helps in preventing caching issues and ensures thread safety for shared variables.
+//Example of volatile Keyword
+We have a class with a volatile boolean variable that is used to control the execution of a thread.
+One thread modifies the value of the volatile variable, while another thread reads its value in a loop.
+The use of the volatile keyword ensures that the reading thread always sees the most up-to-date value of the variable.
+
+//transient Keyword
+The transient keyword in Java is used to indicate that a variable should not be serialized.
+When an object is serialized, all its non-transient fields are converted into a byte stream, while transient fields are ignored.
+This is useful for sensitive data or fields that can be derived from other fields and do not need to be persisted.
+//Example of transient Keyword
+We have a class with a transient field that stores sensitive information, such as a password. When we serialize an object of this class,
+the transient field is not included in the serialized data. When we deserialize the object, the transient field is set to its default value (null for objects,
+0 for integers, etc.).
+
+//synchronized Keyword
+The synchronized keyword in Java is used to control access to a block of code or method by multiple threads.
+When a method or block is declared as synchronized, only one thread can execute it at a time, ensuring thread safety and preventing
+data inconsistency.
+This is particularly useful when multiple threads are accessing shared resources.
+//Example of synchronized Keyword
+We have a class with a synchronized method that increments a counter variable. Multiple threads attempt to call this method simultaneously.
+The synchronized keyword ensures that only one thread can execute the method at a time, preventing race conditions
+and ensuring the correct value of the counter.
+
+//wait(), notify(), and notifyAll() Methods
+In Java, the wait(), notify(), and notifyAll() methods are used for inter-thread communication.
+These methods are part of the Object class and are used to coordinate the execution of threads that share a common resource.
+- wait(): This method is called by a thread to release the lock it holds on an object
+and enter a waiting state until another thread calls notify() or notifyAll() on the same object.
+- notify(): This method is called by a thread to wake up a single thread that is waiting on the same object.
+- notifyAll(): This method is called by a thread to wake up all threads that are waiting on the same object.
+//Example of wait(), notify(), and notifyAll() Methods
+We have a producer-consumer scenario where one thread produces data and another thread consumes it.
+The producer thread calls notify() to wake up the consumer thread when new data is available, and the consumer thread
+calls wait() to wait for new data when the buffer is empty. This coordination ensures that the producer and consumer
+threads work together efficiently without data loss or inconsistency.
+
+//Executor Framework
+The Executor Framework in Java is a high-level concurrency framework that simplifies the management of threads and
+asynchronous task execution. It provides a set of interfaces and classes for creating and managing thread pools,
+submitting tasks for execution, and controlling the lifecycle of threads. The Executor Framework helps in improving
+the performance and scalability of concurrent applications by efficiently managing thread resources.
+//Example of Executor Framework
+We have a class that implements the Runnable interface to define a task that prints a message.
+We create a fixed thread pool using the Executors class and submit multiple tasks to the executor for execution.
+The Executor Framework manages the threads and executes the tasks concurrently, allowing for efficient use of system resources.
+
+//Callable and Future
+The Callable and Future interfaces in Java are part of the concurrency framework and are used for executing tasks
+that return a result and may throw exceptions.
+- Callable: This interface represents a task that can be executed by a thread and returns a result.
+It has a single method, call(), which is similar to the run() method of the Runnable interface but can return a value and throw checked exceptions.
+- Future: This interface represents the result of an asynchronous computation. It provides methods to check if the computation is complete,
+retrieve the result, and cancel the computation if needed.
+//Example of Callable and Future
+We have a class that implements the Callable interface to define a task that computes the sum of two integers.
+We create a thread pool using the Executors class and submit the Callable task to the executor. The submit() method returns a Future object,
+which we can use to retrieve the result of the computation once it is complete.
+
+//Java Streams
+Java Streams is a powerful feature introduced in Java 8 that allows for functional-style operations on sequences of elements,
+such as collections, arrays, or I/O channels. Streams provide a way to process data in a declarative manner, enabling operations like filtering,
+mapping, and reducing. Streams can be either sequential or parallel, allowing for efficient data processing and improved performance.
+//Example of Java Streams
+We have a list of integers and we want to filter out the even numbers, square them, and collect the results into a new list.
+Using Java Streams, we can achieve this in a concise and readable way by chaining multiple operations together.
+We create a stream from the list, apply the filter() method to select even numbers, use the map() method to square them,
+and finally collect the results into a new list using the collect() method.
+
+//Collectors
+Collectors in Java are a part of the java.util.stream package and provide various utility methods to accumulate
+elements of a stream into a collection or a single result. Collectors are used in conjunction with the collect() method of the Stream interface
+to perform mutable reduction operations on the elements of a stream. They allow for operations like grouping, partitioning, and summarizing data.
+//Example of Collectors
+We have a list of strings representing names of people. We want to group these names by their first letter.
+Using Collectors, we can achieve this by using the groupingBy() method to group the names based on the first character.
+We create a stream from the list, apply the collect() method with the groupingBy() collector, and obtain a map where the keys are the first letters
+and the values are lists of names that start with those letters.
+
+//Reflection in Java
+Reflection in Java is a powerful feature that allows a program to inspect and manipulate the properties and behavior of classes,
+methods, and fields at runtime. It provides the ability to analyze class metadata, create instances of
+classes, invoke methods, and access fields dynamically. Reflection is part of the java.lang.reflect package and is commonly used in frameworks,
+libraries, and tools that require dynamic behavior.
+//Example of Reflection in Java
+We have a class with private fields and methods. Using reflection, we can access and modify these private members at runtime.
+We obtain the Class object of the class, retrieve the Field and Method objects using their names, and set them accessible to bypass the access control checks.
+We can then read and modify the private fields and invoke the private methods dynamically.
+
+//ClassLoader
+A ClassLoader in Java is a part of the Java Runtime Environment that is responsible for loading classes into memory during runtime.
+ClassLoaders follow a hierarchical delegation model, where a ClassLoader first delegates the class loading request
+to its parent ClassLoader before attempting to load the class itself. This mechanism allows for dynamic loading of classes,
+enabling features like dynamic class loading, custom class loading, and modular applications.
+//Example of ClassLoader
+We can create a custom ClassLoader by extending the ClassLoader class and overriding the findClass() method.
+In this method, we can define our own logic to load classes from a specific location, such as a file system or a network.
+We can then use our custom ClassLoader to load classes dynamically at runtime, allowing for flexible and modular application design.
+
+//Lock
+In Java, a Lock is a synchronization mechanism that provides more advanced thread synchronization capabilities
+than the traditional synchronized keyword. Locks are part of the java.util.concurrent.locks package and allow for
+explicit locking and unlocking of resources, as well as features like tryLock() and lockInterruptibly() for more flexible thread management.
+//Example of Lock
+We have a class that uses a ReentrantLock to control access to a shared resource.
+We create a Lock object and use the lock() method to acquire the lock before accessing the shared resource.
+After the operation is complete, we use the unlock() method to release the lock. This ensures that only one thread can access the shared resource at a time,
+preventing data inconsistency and race conditions.
+
+//ReadWriteLock
+In Java, a ReadWriteLock is a synchronization mechanism that allows multiple threads to read a shared resource concurrently,
+while ensuring exclusive access for write operations. ReadWriteLocks are part of the java.util.concurrent.
+locks package and provide two separate locks:
+one for read operations and another for write operations. This allows for improved concurrency and performance in
+scenarios where read operations are more frequent than write operations.
+//Example of ReadWriteLock
+We have a class that uses a ReentrantReadWriteLock to manage access to a shared resource.
+We create a ReadWriteLock object and use the readLock() method to acquire the read lock for read operations.
+For write operations, we use the writeLock() method to acquire the write lock. This allows multiple threads to read the resource simultaneously,
+while ensuring that only one thread can write to the resource at a time, preventing data inconsistency and race conditions.
+
+//Factory Method
+The Factory Method is a creational design pattern that provides an interface for creating objects in a superclass,
+but allows subclasses to alter the type of objects that will be created. This pattern promotes loose coupling
+and enhances code maintainability by encapsulating the object creation logic within factory methods.
+//Example of Factory Method
+We have an abstract class with a factory method that defines the interface for creating objects.
+Subclasses implement the factory method to create specific types of objects. In the main class, we use the factory method to create objects without
+knowing the exact class of the object being created, promoting flexibility and extensibility in the code.
+
+//Singleton Pattern
+The Singleton Pattern is a creational design pattern that ensures a class has only one instance and provides a global point of access to that instance.
+This pattern is useful when exactly one object is needed to coordinate actions across the system.
+//Example of Singleton Pattern
+We have a class with a private static variable to hold the single instance of the class.
+The constructor is private to prevent instantiation from outside the class. A public static method is provided to return the single instance of the class.
+This ensures that only one instance of the class is created and provides a global access point to that instance.
+
+//Observer Pattern
+The Observer Pattern is a behavioral design pattern that defines a one-to-many dependency between objects,
+so that when one object (the subject) changes state, all its dependents (observers) are notified and updated automatically.
+This pattern is commonly used in event-driven systems and GUI applications.
+//Example of Observer Pattern
+We have a Subject class that maintains a list of observers and provides methods to attach, detach, and notify observers.
+Observers implement an interface with an update() method that is called when the subject's state changes.
+In the main class, we create a subject and multiple observers, attach the observers to
+the subject, and demonstrate how changes in the subject's state notify all observers.
+
+//Decorator Pattern
+The Decorator Pattern is a structural design pattern that allows behavior to be added to individual objects,
+dynamically, without affecting the behavior of other objects from the same class. This pattern is
+useful for extending the functionality of classes in a flexible and reusable way.
+//Example of Decorator Pattern
+We have a Component interface that defines the methods for the objects to be decorated.
+ConcreteComponent implements the Component interface and provides the base functionality.
+Decorator is an abstract class that implements the Component interface and contains a reference to a Component object.
+ConcreteDecorator extends the Decorator class and adds additional behavior to the component.
+In the main class, we create a ConcreteComponent and wrap it with one or more ConcreteDecorators to enhance its functionality.
+
+//Strategy Pattern
+The Strategy Pattern is a behavioral design pattern that defines a family of algorithms, encapsulates each one,
+and makes them interchangeable. This pattern allows the algorithm to vary independently from the clients that use it.
+It promotes flexibility and reusability by separating the algorithm implementation from the context that uses it.
+//Example of Strategy Pattern
+We have a Strategy interface that defines a method for executing an algorithm.
+ConcreteStrategy classes implement the Strategy interface and provide specific algorithm implementations.
+The Context class maintains a reference to a Strategy object and uses it to execute the algorithm.
+In the main class, we create a Context object and set different Strategy implementations to demonstrate how the algorithm can be changed at runtime.
+
+//Adapter Pattern
+The Adapter Pattern is a structural design pattern that allows incompatible interfaces to work together. It acts as a bridge between two incompatible interfaces,
+enabling them to communicate and collaborate effectively. This pattern is useful when integrating legacy code or third-party libraries into existing systems.
+//Example of Adapter Pattern
+We have a Target interface that defines the desired interface for the client.
+The Adaptee class has an incompatible interface that needs to be adapted.
+The Adapter class implements the Target interface and contains a reference to an Adaptee object.
+It translates the requests from the Target interface to the Adaptee interface.
+In the main class, we create an Adapter object and use it to interact with the Adaptee through the Target interface.
+
+
+
 
