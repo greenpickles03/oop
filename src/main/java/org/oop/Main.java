@@ -48,5 +48,8 @@ public class Main {
         child.functionA(20);
         // Polymorphism in action
         polyChild.functionA(30);
+
+        Immutable obj = new Immutable( "Immutable Object");
+        System.out.println("Immutable Object ID: " + obj.getName());
     }
 }
