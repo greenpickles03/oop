@@ -354,6 +354,9 @@ The Adapter class implements the Target interface and contains a reference to an
 It translates the requests from the Target interface to the Adaptee interface.
 In the main class, we create an Adapter object and use it to interact with the Adaptee through the Target interface.
 
+//Java Garbage Collection
+
+
 
 
 
